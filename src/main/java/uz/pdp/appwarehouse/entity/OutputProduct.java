@@ -2,6 +2,7 @@ package uz.pdp.appwarehouse.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -9,6 +10,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Builder
 public class OutputProduct {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

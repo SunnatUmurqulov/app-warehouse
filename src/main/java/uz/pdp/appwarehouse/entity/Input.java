@@ -2,6 +2,7 @@ package uz.pdp.appwarehouse.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import java.sql.Timestamp;
@@ -10,6 +11,7 @@ import java.sql.Timestamp;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Builder
 public class Input {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -1,13 +1,25 @@
 package uz.pdp.appwarehouse.entity;
 
-import jakarta.persistence.Entity;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
-import uz.pdp.appwarehouse.entity.template.AbsEntity;
+import lombok.NoArgsConstructor;
+import uz.pdp.appwarehouse.entity.enums.CurrencyType;
 
-@EqualsAndHashCode(callSuper = true)
+
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
-public class Currency extends AbsEntity {
+@Builder
+public class Currency {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+    private String name;
+    @Enumerated(EnumType.STRING)
+    private CurrencyType currencyType;
+    private boolean active = true;
 
 }

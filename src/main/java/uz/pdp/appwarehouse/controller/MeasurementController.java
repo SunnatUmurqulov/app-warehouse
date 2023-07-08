@@ -31,12 +31,12 @@ public class MeasurementController {
         return measurementService.getMeasure(id);
     }
 
-    @PutMapping("{/id}")
+    @PutMapping("/{id}")
     public HttpEntity<ApiResponse> editMeasurement(@PathVariable Integer id, @RequestBody MeasurementDto measurementDto){
         return measurementService.editMeasurement(id,measurementDto);
     }
 
-    @DeleteMapping("{/id}")
+    @DeleteMapping("/{id}")
     public HttpEntity<?> deleteMeasurement(@PathVariable Integer id){
         return measurementService.deleteMeasurement(id);
     }

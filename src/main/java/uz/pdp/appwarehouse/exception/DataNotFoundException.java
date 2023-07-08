@@ -1,0 +1,7 @@
+package uz.pdp.appwarehouse.exception;
+
+public class DataNotFoundException extends RuntimeException {
+    public DataNotFoundException(String msg){
+        super(msg);
+    }
+}

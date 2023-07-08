@@ -30,7 +30,7 @@ public class MeasurementService {
     }
 
     public List<Measurement> getAllMeasure() {
-        return measurementRepository.findAllAndActiveTrue();
+        return measurementRepository.findAllByActiveTrue();
     }
 
     public HttpEntity<?> getMeasure(Integer id) {

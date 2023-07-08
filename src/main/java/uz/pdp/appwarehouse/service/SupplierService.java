@@ -56,7 +56,7 @@ public class SupplierService {
     }
 
     public HttpEntity<?> getAll() {
-        List<Supplier> supplierList = supplierRepository.findAllAndActiveTrue();
+        List<Supplier> supplierList = supplierRepository.findAllByActiveTrue();
         return ResponseEntity.ok(supplierList);
     }
 

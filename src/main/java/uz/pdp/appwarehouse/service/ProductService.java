@@ -62,7 +62,7 @@ public class ProductService {
     }
 
     public HttpEntity<?> getAll() {
-        List<Product> productList = productRepository.findAllAndActiveTrue();
+        List<Product> productList = productRepository.findAllByActiveTrue();
         return ResponseEntity.ok(productList);
     }
 

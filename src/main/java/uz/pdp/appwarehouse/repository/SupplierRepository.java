@@ -9,8 +9,7 @@ import java.util.Optional;
 public interface SupplierRepository extends JpaRepository<Supplier, Integer> {
     boolean existsByPhoneNumber(String phoneNumber);
 
-    Optional<Supplier> findByIdAndActiveTrue(Integer supplierId);
+    List<Supplier> findAllByActiveTrue();
 
-    List<Supplier> findAllAndActiveTrue();
-
+    Optional<Supplier> findByIdAndActiveTrue(Integer id);
 }

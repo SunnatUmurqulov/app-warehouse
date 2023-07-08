@@ -11,7 +11,7 @@ import java.util.Optional;
 public interface MeasurementRepository extends JpaRepository<Measurement, Integer> {
     boolean existsByName(String name);
 
-    List<Measurement> findAllAndActiveTrue();
+    List<Measurement> findAllByActiveTrue();
 
     Optional<Measurement> findByIdAndActiveTrue(Integer id);
 }
